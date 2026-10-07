@@ -32,22 +32,35 @@ def download_youtube_audio(url: str) -> str:
                 "preferredquality": "192",
             }
         ],
+        # Write mono 16 kHz audio: all the speech models need, and about a
+        # sixth of the size of the default stereo 48 kHz WAV (less RAM later).
+        "postprocessor_args": {"extractaudio": ["-ac", "1", "-ar", "16000"]},
         "quiet": True,
         # YouTube now requires solving a JavaScript challenge; without a JS
         # runtime the stream URLs are rejected with HTTP 403. Node.js and Deno
         # are both allowed (needs Node or Deno installed and on PATH).
         "js_runtimes": {"node": {}, "deno": {}},
     }
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(url, download=True)
-        # prepare_filename gives the pre-conversion name (.webm, .m4a, .opus, ...);
-        # swap whatever extension it has for .wav to get the converted file.
-        filename = os.path.splitext(ydl.prepare_filename(info))[0] + ".wav"
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=True)
+            fallback = os.path.splitext(ydl.prepare_filename(info))[0] + ".wav"
+    except yt_dlp.utils.DownloadError as error:
+        # Typical on cloud hosts: YouTube answers "Sign in to confirm you're
+        # not a bot" to data-centre IP addresses.
+        raise RuntimeError(f"YouTube refused the audio download: {error}") from error
 
-    if not os.path.exists(filename):
+    # yt-dlp records the final (post-conversion) path of what it downloaded.
+    downloads = info.get("requested_downloads") or []
+    filename = downloads[0].get("filepath") if downloads else fallback
+
+    if not filename or not os.path.exists(filename):
         raise FileNotFoundError(
-            "The audio download did not produce a file. YouTube may be blocking "
-            "this server, or the link is not a single video."
+            "The audio download did not produce a file "
+            f"(got a {info.get('_type', 'video')} with {len(downloads)} download(s); "
+            f"expected {filename or fallback}; "
+            f"folder holds {sorted(os.listdir(DOWNLOAD_DIR))[:5]}). "
+            "YouTube may be blocking this server."
         )
     return filename
 
