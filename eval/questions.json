@@ -1,0 +1,15 @@
+[
+  {"question": "What is a painted door test?", "start": 13, "end": 68, "answerable": true},
+  {"question": "What did Anthropic remove from the $20 plan?", "start": 60, "end": 95, "answerable": true},
+  {"question": "How much investment did OpenAI get and how long will it last?", "start": 135, "end": 160, "answerable": true},
+  {"question": "How did GitHub Copilot change the way it charges users?", "start": 178, "end": 245, "answerable": true},
+  {"question": "How much more expensive is Opus than Cursor's Composer model?", "start": 200, "end": 220, "answerable": true},
+  {"question": "Which company sponsored the video?", "start": 297, "end": 325, "answerable": true},
+  {"question": "Why is Google described as the real winner?", "start": 355, "end": 409, "answerable": true},
+  {"question": "What happened with Uber's AI budget?", "start": 409, "end": 430, "answerable": true},
+  {"question": "Why do AI company leaders keep saying people will lose their jobs soon?", "start": 460, "end": 500, "answerable": true},
+  {"question": "What tip does the speaker give for learning an open source project?", "start": 545, "end": 578, "answerable": true},
+  {"question": "What is OIDC and how does it differ from SAML?", "answerable": false},
+  {"question": "What does the speaker think about Rust versus Go?", "answerable": false},
+  {"question": "How many employees does Anthropic have?", "answerable": false}
+]

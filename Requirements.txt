@@ -1,0 +1,35 @@
+# --- UI ---
+streamlit
+
+# --- Audio input ---
+yt-dlp[default]         # download audio from YouTube URLs ([default] adds the JS challenge solver)
+youtube-transcript-api  # fetch existing YouTube captions (fast path, skips Whisper)
+
+# --- Transcription (local Whisper) ---
+faster-whisper          # Whisper on CTranslate2: ~4x faster on CPU (int8), returns timestamps
+numpy
+torch                   # used by sentence-transformers for the embeddings
+
+# --- LLM: Google Gemini (AI Studio key) via LangChain LCEL ---
+langchain
+langchain-core
+langchain-google-genai
+langchain-text-splitters
+
+# --- RAG: ChromaDB + HuggingFace embeddings ---
+langchain-community
+langchain-chroma
+chromadb
+langchain-huggingface
+sentence-transformers
+
+# --- Export ---
+fpdf2                   # PDF export (not used by the code yet)
+
+# --- Config ---
+python-dotenv           # loads GOOGLE_API_KEY etc. from .env
+
+pydub
+audioop-lts; python_version >= "3.13"   # pydub needs audioop, removed from Python 3.13
+requests
+markdown-it-py           # renders the model's Markdown in app.py

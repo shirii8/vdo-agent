@@ -1,0 +1,7 @@
+# Streamlit's built-in widget theme, matched to the custom CSS in app.py.
+[theme]
+base = "light"
+primaryColor = "#43302E"              # Old Burgundy
+backgroundColor = "#FFF9E3"           # light Buttermilk
+secondaryBackgroundColor = "#C1DBE8"  # Pastel Blue
+textColor = "#43302E"

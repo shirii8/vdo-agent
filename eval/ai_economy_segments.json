@@ -1,0 +1,845 @@
+{
+ "video": "https://www.youtube.com/watch?v=_Q-e_nczWqM",
+ "segments": [
+  {
+   "start": 0.05,
+   "end": 7.33,
+   "text": "All right fellas it's happening the cracks are starting the show the foundations looking a little bit shaky"
+  },
+  {
+   "start": 7.33,
+   "end": 10.95,
+   "text": "I'm talking about the AI economy the token economy"
+  },
+  {
+   "start": 11.23,
+   "end": 16.87,
+   "text": "The first one comes courtesy of course of Anthropic everybody's favorite the good guys am I right?"
+  },
+  {
+   "start": 16.87,
+   "end": 20.85,
+   "text": "I love their lawyers what ended up happening just a couple days ago is"
+  },
+  {
+   "start": 21.09,
+   "end": 25.25,
+   "text": "Anthropic did something called a painted door test at least that's the term I've always heard"
+  },
+  {
+   "start": 25.25,
+   "end": 28.57,
+   "text": "I think I've seen other people use fake door test where you actually show"
+  },
+  {
+   "start": 28.93,
+   "end": 35.19,
+   "text": "Alternative pricing on your page to see hey how much more money could we make if we charged people more?"
+  },
+  {
+   "start": 35.19,
+   "end": 39.05,
+   "text": "How many more people would leave the pricing page? So let me give you a hypothetical"
+  },
+  {
+   "start": 39.49,
+   "end": 45.25,
+   "text": "Let's say that you raise the cost of your product by 10% and a thousand people visit your pricing page"
+  },
+  {
+   "start": 45.65,
+   "end": 50.73,
+   "text": "Typically you'd get a hundred customers out of your thousand customers, but now with your raised prices"
+  },
+  {
+   "start": 50.73,
+   "end": 55.81,
+   "text": "You only get 95 customers, but of those 95 customers you make more money"
+  },
+  {
+   "start": 55.81,
+   "end": 58.49,
+   "text": "So you say hey the area under the curve is worth it"
+  },
+  {
+   "start": 58.49,
+   "end": 61.49,
+   "text": "We're gonna lose a couple customers, but we're gonna gain more money"
+  },
+  {
+   "start": 61.49,
+   "end": 64.01,
+   "text": "This is kind of the idea of a painted door test"
+  },
+  {
+   "start": 64.09,
+   "end": 68.53,
+   "text": "But Anthropic did something a bit different instead of doing a price change"
+  },
+  {
+   "start": 68.61,
+   "end": 72.97,
+   "text": "They just simply removed Claude code usage from the $20 plan"
+  },
+  {
+   "start": 72.97,
+   "end": 78.25,
+   "text": "See in a typical painted door test after someone says okay, we'll pay this price. They're like, hey, bro"
+  },
+  {
+   "start": 79.05,
+   "end": 80.45,
+   "text": "You're super special to us"
+  },
+  {
+   "start": 80.45,
+   "end": 83.05,
+   "text": "So you get actually a reduced price because we love you well"
+  },
+  {
+   "start": 83.21,
+   "end": 88.97,
+   "text": "This one there's an entire group of people that when they visited this page saw they couldn't use Claude code for $20 a month"
+  },
+  {
+   "start": 88.97,
+   "end": 93.49,
+   "text": "They paid $100 a month. It just tricked some small percentage of people"
+  },
+  {
+   "start": 93.49,
+   "end": 96.81,
+   "text": "I don't think anyone's surprised by this and the people that are surprised by it"
+  },
+  {
+   "start": 96.81,
+   "end": 103.59,
+   "text": "You always hear kind of the same thing. Well, they're making money off of inference like every time they do like a request call"
+  },
+  {
+   "start": 103.59,
+   "end": 105.09,
+   "text": "Of course, they make money and it's like yeah"
+  },
+  {
+   "start": 105.09,
+   "end": 111.21,
+   "text": "I guess if you measured how much a shoe cost by only paying the employee to sell the shoe"
+  },
+  {
+   "start": 111.21,
+   "end": 114.65,
+   "text": "Then you're like yeah, you're making money off of every shoe. They're making money off of every request"
+  },
+  {
+   "start": 115.09,
+   "end": 123.17,
+   "text": "Yeah, that makes sense, but you're not actually considering the real cost remember people that used opus 4 5 are now using opus 4 6"
+  },
+  {
+   "start": 123.17,
+   "end": 126.29,
+   "text": "Nobody's using opus 4 7 kind of tarted model. No"
+  },
+  {
+   "start": 126.77,
+   "end": 133.85,
+   "text": "No one really likes that one, but that means all the cost that went into 4 5 if they didn't recoup that in"
+  },
+  {
+   "start": 134.57,
+   "end": 136.01,
+   "text": "inference cost"
+  },
+  {
+   "start": 136.01,
+   "end": 143.09,
+   "text": "4 5 just cost the money and this is obviously what's happening open AI got a hundred and twenty two or a hundred and twenty billion"
+  },
+  {
+   "start": 143.49,
+   "end": 148.97,
+   "text": "Dollar investment and that's enough money to run for 18 to 24 months"
+  },
+  {
+   "start": 148.97,
+   "end": 156.33,
+   "text": "That is like five to seven billion dollars every single month in the hole for the next 18 to 24 months"
+  },
+  {
+   "start": 156.33,
+   "end": 159.85,
+   "text": "They had to do this test because they have to know how much money they can make"
+  },
+  {
+   "start": 159.97,
+   "end": 164.21,
+   "text": "Because if they don't make some sort of change, they're gonna continue to lose billions of dollars"
+  },
+  {
+   "start": 164.21,
+   "end": 168.89,
+   "text": "Now if this just happened by itself, I'd say hey claw just needs to make more money"
+  },
+  {
+   "start": 168.89,
+   "end": 173.53,
+   "text": "They need to start becoming more competitive because they're competing against open AI and then I'd be like okay"
+  },
+  {
+   "start": 173.53,
+   "end": 178.57,
+   "text": "That's that's just that but this isn't the only case of this happening because just a couple days ago"
+  },
+  {
+   "start": 178.57,
+   "end": 184.37,
+   "text": "Guess who else decided to make a bit of a price change Microsoft. Oh beautiful Microsoft. I love Satya"
+  },
+  {
+   "start": 184.37,
+   "end": 186.63,
+   "text": "I love co pile is a cool"
+  },
+  {
+   "start": 187.49,
+   "end": 192.69,
+   "text": "Is this the greatest you're probably confused when I say co-pilot because you're probably thinking of like one of their 50 services"
+  },
+  {
+   "start": 192.69,
+   "end": 195.97,
+   "text": "I'm talking about the github the github co-pilot in this case"
+  },
+  {
+   "start": 196.05,
+   "end": 200.93,
+   "text": "See the github co-pilot you used to pay some sort of amount of money and then you can perform actions on behalf"
+  },
+  {
+   "start": 200.93,
+   "end": 204.61,
+   "text": "You had some sort of amount of actions you could execute. Well, what's the problem with that?"
+  },
+  {
+   "start": 204.73,
+   "end": 210.57,
+   "text": "Not every model costs the same if you're thinking about composer too fast from cursor that thing costs like"
+  },
+  {
+   "start": 211.21,
+   "end": 216.33,
+   "text": "Nothing when you're thinking about opus 47 that costs a lot more"
+  },
+  {
+   "start": 216.33,
+   "end": 220.95,
+   "text": "We're talking like 20 times more of the cost so obviously co-pilot"
+  },
+  {
+   "start": 220.95,
+   "end": 223.31,
+   "text": "They had to make some sort of reduction and that's what they did"
+  },
+  {
+   "start": 223.31,
+   "end": 229.95,
+   "text": "You no longer just get some amount of executes you get token usage because if you use a more expensive model"
+  },
+  {
+   "start": 229.95,
+   "end": 232.59,
+   "text": "Well, guess what you got to use more of your tokens"
+  },
+  {
+   "start": 233.15,
+   "end": 239.59,
+   "text": "Therefore you won't get as many calls out of it. This is a change. It needs to become more economically viable"
+  },
+  {
+   "start": 239.59,
+   "end": 242.19,
+   "text": "But before that to pay for all my tokens sponsor time"
+  },
+  {
+   "start": 242.43,
+   "end": 246.19,
+   "text": "Look at all these engineers sitting at their need little desks"
+  },
+  {
+   "start": 246.51,
+   "end": 249.39,
+   "text": "It takes dirty work to keep a code base clean"
+  },
+  {
+   "start": 249.91,
+   "end": 254.59,
+   "text": "Everyday sickos are out there committing unreviewed code and when that happens"
+  },
+  {
+   "start": 255.39,
+   "end": 258.87,
+   "text": "Linters won't save you. You need someone like me"
+  },
+  {
+   "start": 261.8,
+   "end": 268.28,
+   "text": "Scrum bag who you calling scrumbag? What's this slop? You're trying to push unnecessary comments global state"
+  },
+  {
+   "start": 269.44,
+   "end": 275.28,
+   "text": "Nested turnaries. Oh my bad. I didn't even read the code yet. You disgust me step away from the keyboard"
+  },
+  {
+   "start": 275.28,
+   "end": 277.28,
+   "text": "Let me explain is that a mouse?"
+  },
+  {
+   "start": 277.56,
+   "end": 281.72,
+   "text": "He's margin of prod. Oh, you have the right to remain silent anything you push to get up"
+  },
+  {
+   "start": 281.72,
+   "end": 284.36,
+   "text": "Canon will be used against you to have the right to a debugger"
+  },
+  {
+   "start": 284.4,
+   "end": 287.6,
+   "text": "But if you cannot afford one a public stack trace will be made available"
+  },
+  {
+   "start": 289.6,
+   "end": 294.36,
+   "text": "And one more code criminal off the streets where they belong HR"
+  },
+  {
+   "start": 297.12,
+   "end": 299.96,
+   "text": "Look, I didn't yet. I know"
+  },
+  {
+   "start": 300.0,
+   "end": 304.26,
+   "text": "I didn't review any of the code, but I was gonna have CodeRabbit review it from the start."
+  },
+  {
+   "start": 304.26,
+   "end": 308.08,
+   "text": "With one click fixes, install enforcement, I don't need MergeCop."
+  },
+  {
+   "start": 308.08,
+   "end": 312.62,
+   "text": "I would never merge a review code, but a first pass with CodeRabbit always makes things go"
+  },
+  {
+   "start": 312.62,
+   "end": 313.62,
+   "text": "faster."
+  },
+  {
+   "start": 313.62,
+   "end": 317.6,
+   "text": "Actually, you can try it too at CodeRabbit.ai."
+  },
+  {
+   "start": 317.6,
+   "end": 319.28,
+   "text": "Next week on MergeCop."
+  },
+  {
+   "start": 319.28,
+   "end": 326.75,
+   "text": "The diffler's out there, and I'm gonna be the one to deprecate him."
+  },
+  {
+   "start": 326.75,
+   "end": 330.55,
+   "text": "See the difference between Microsoft and Anthropoc is Microsoft makes money."
+  },
+  {
+   "start": 330.55,
+   "end": 335.11,
+   "text": "I know, crazy concept for Anthropic, but Microsoft makes a lot of money."
+  },
+  {
+   "start": 335.11,
+   "end": 340.31,
+   "text": "Whether you like it or not, they're one of the biggest companies in the world, and therefore"
+  },
+  {
+   "start": 340.31,
+   "end": 345.35,
+   "text": "they can actually kind of take like a bit of a nosedive for a while while accumulating"
+  },
+  {
+   "start": 345.35,
+   "end": 346.35,
+   "text": "users."
+  },
+  {
+   "start": 346.35,
+   "end": 350.27,
+   "text": "But even at this point, they're going, hey, we can't do this."
+  },
+  {
+   "start": 350.27,
+   "end": 351.27,
+   "text": "We gotta make more."
+  },
+  {
+   "start": 351.27,
+   "end": 352.87,
+   "text": "This is silly."
+  },
+  {
+   "start": 352.87,
+   "end": 353.87,
+   "text": "What's going on here?"
+  },
+  {
+   "start": 353.87,
+   "end": 356.03,
+   "text": "This doesn't even make sense according to Microsoft."
+  },
+  {
+   "start": 356.03,
+   "end": 360.75,
+   "text": "Now the real winner, honestly, from all of this is Google, classic Google."
+  },
+  {
+   "start": 360.75,
+   "end": 366.47,
+   "text": "They're pouring like $100 plus billion a year into AI, and they can just do that."
+  },
+  {
+   "start": 366.47,
+   "end": 367.47,
+   "text": "And guess what?"
+  },
+  {
+   "start": 367.47,
+   "end": 373.39,
+   "text": "After they pour $100 billion, $200 billion into AI, they still make money."
+  },
+  {
+   "start": 373.39,
+   "end": 374.55,
+   "text": "That's wild."
+  },
+  {
+   "start": 374.55,
+   "end": 379.23,
+   "text": "They can do so much money for the next year after year, and they don't have to worry"
+  },
+  {
+   "start": 379.23,
+   "end": 382.35,
+   "text": "about will investors still find me attractive."
+  },
+  {
+   "start": 382.35,
+   "end": 386.83,
+   "text": "That's probably why you're not getting the same level of hype coming from Google that"
+  },
+  {
+   "start": 386.83,
+   "end": 388.11,
+   "text": "you get from these companies."
+  },
+  {
+   "start": 388.11,
+   "end": 390.07,
+   "text": "I just think about that for a second."
+  },
+  {
+   "start": 390.07,
+   "end": 392.11,
+   "text": "Google's also competing on the frontier."
+  },
+  {
+   "start": 392.11,
+   "end": 394.51,
+   "text": "Google's also attempting to win the market."
+  },
+  {
+   "start": 394.51,
+   "end": 397.79,
+   "text": "Google's also trying to convince everybody that their AI is the best AI, that they're"
+  },
+  {
+   "start": 397.79,
+   "end": 401.19,
+   "text": "going to be able to shepherd it and take it into the future despite the fact of inventing"
+  },
+  {
+   "start": 401.19,
+   "end": 406.43,
+   "text": "the T and GPT and somehow fumbling the bag and not being the first from the market."
+  },
+  {
+   "start": 406.43,
+   "end": 408.23,
+   "text": "Nobody knows the answer to that one."
+  },
+  {
+   "start": 408.23,
+   "end": 409.79,
+   "text": "And AI is really expensive."
+  },
+  {
+   "start": 409.79,
+   "end": 414.87,
+   "text": "Uber just got done claiming that within four months they spent their entire year's budget"
+  },
+  {
+   "start": 414.87,
+   "end": 415.87,
+   "text": "on AI."
+  },
+  {
+   "start": 415.87,
+   "end": 418.43,
+   "text": "Gee, I can't believe this is happening."
+  },
+  {
+   "start": 418.43,
+   "end": 421.63,
+   "text": "How could you tell every employee to maximally use AI?"
+  },
+  {
+   "start": 421.63,
+   "end": 424.15,
+   "text": "By the way, we're judging you on AI usage."
+  },
+  {
+   "start": 424.15,
+   "end": 426.23,
+   "text": "Oh my gosh, you're using too much AI."
+  },
+  {
+   "start": 426.23,
+   "end": 427.47,
+   "text": "How'd that happen?"
+  },
+  {
+   "start": 427.47,
+   "end": 428.47,
+   "text": "What the hell?"
+  },
+  {
+   "start": 428.47,
+   "end": 431.27,
+   "text": "You're not supposed to be using the year budget in four months."
+  },
+  {
+   "start": 431.27,
+   "end": 432.43,
+   "text": "What are you even doing?"
+  },
+  {
+   "start": 432.43,
+   "end": 434.43,
+   "text": "What are people doing with all those tokens?"
+  },
+  {
+   "start": 434.43,
+   "end": 435.43,
+   "text": "I don't even know."
+  },
+  {
+   "start": 435.43,
+   "end": 438.11,
+   "text": "Like I don't think we're going to be like, well, back it up everybody."
+  },
+  {
+   "start": 438.47,
+   "end": 439.51,
+   "text": "We're not going to use AI anymore."
+  },
+  {
+   "start": 439.51,
+   "end": 443.25,
+   "text": "We're going to have to go back to hand coding everything because AI is just not economically"
+  },
+  {
+   "start": 443.25,
+   "end": 444.25,
+   "text": "viable."
+  },
+  {
+   "start": 444.25,
+   "end": 446.23,
+   "text": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no."
+  },
+  {
+   "start": 446.23,
+   "end": 447.43,
+   "text": "They will find a way."
+  },
+  {
+   "start": 447.43,
+   "end": 451.03,
+   "text": "Sure, it may be in a couple of years, but you know what?"
+  },
+  {
+   "start": 451.03,
+   "end": 453.47,
+   "text": "They're going to find a way to make this thing viable."
+  },
+  {
+   "start": 453.47,
+   "end": 455.71000000000004,
+   "text": "But for now we're starting to see the cracks."
+  },
+  {
+   "start": 455.71000000000004,
+   "end": 459.27,
+   "text": "Things just can't be as free as they once were and the amount of usage you're going"
+  },
+  {
+   "start": 459.27,
+   "end": 461.66999999999996,
+   "text": "to be getting is clearly and obviously going down."
+  },
+  {
+   "start": 461.66999999999996,
+   "end": 465.31,
+   "text": "I don't want to be the person that's like, oh, Mr. Anti-AI for all reasons."
+  },
+  {
+   "start": 465.51,
+   "end": 468.87,
+   "text": "That's why I make this video to show you how ridiculous their marketing is."
+  },
+  {
+   "start": 468.87,
+   "end": 471.51,
+   "text": "This is why they do such hyped out marketing."
+  },
+  {
+   "start": 471.51,
+   "end": 475.83000000000004,
+   "text": "This is why Dario's constantly telling you, hey, you're out of a job here very, very soon."
+  },
+  {
+   "start": 475.83000000000004,
+   "end": 476.83000000000004,
+   "text": "You, you, you."
+  },
+  {
+   "start": 476.83000000000004,
+   "end": 477.83000000000004,
+   "text": "Yeah, we're going to take your job."
+  },
+  {
+   "start": 477.83000000000004,
+   "end": 480.11,
+   "text": "I feel super bad about it."
+  },
+  {
+   "start": 480.11,
+   "end": 483.90999999999997,
+   "text": "Oh, I just feel so bad about me taking all of your money."
+  },
+  {
+   "start": 483.90999999999997,
+   "end": 485.78999999999996,
+   "text": "I'm so sorry."
+  },
+  {
+   "start": 485.78999999999996,
+   "end": 487.87,
+   "text": "It's so dangerous."
+  },
+  {
+   "start": 487.87,
+   "end": 489.63,
+   "text": "But this is the reason why they're doing it."
+  },
+  {
+   "start": 489.63,
+   "end": 490.63,
+   "text": "They need to raise money."
+  },
+  {
+   "start": 490.63,
+   "end": 492.51,
+   "text": "This is why Google doesn't do it."
+  },
+  {
+   "start": 492.51,
+   "end": 497.39,
+   "text": "They don't need to raise the same kind of capital that Dario and Sam need to raise."
+  },
+  {
+   "start": 497.39,
+   "end": 499.63,
+   "text": "I think there's plenty of great uses for AI."
+  },
+  {
+   "start": 499.63,
+   "end": 504.90999999999997,
+   "text": "I do use it on the regular even though I participate in Dario's least favorite activity,"
+  },
+  {
+   "start": 504.90999999999997,
+   "end": 505.90999999999997,
+   "text": "hand coding, every single."
+  },
+  {
+   "start": 505.90999999999997,
+   "end": 506.90999999999997,
+   "text": "I'm a trad coder."
+  },
+  {
+   "start": 506.90999999999997,
+   "end": 509.35,
+   "text": "Okay, I like trad coding, but I also like AI."
+  },
+  {
+   "start": 509.35,
+   "end": 512.4300000000001,
+   "text": "There's plenty of times that it's actually super convenient."
+  },
+  {
+   "start": 512.4300000000001,
+   "end": 515.47,
+   "text": "And so ultimately I just hope to kind of bring a bit of a more middle ground to"
+  },
+  {
+   "start": 515.47,
+   "end": 517.63,
+   "text": "things because tech is exciting."
+  },
+  {
+   "start": 517.63,
+   "end": 519.47,
+   "text": "Like think about this for a second."
+  },
+  {
+   "start": 519.47,
+   "end": 522.91,
+   "text": "We get to build like anything that your mind can come up with."
+  },
+  {
+   "start": 522.91,
+   "end": 526.39,
+   "text": "Like that is such an incredible privilege to have."
+  },
+  {
+   "start": 526.39,
+   "end": 530.87,
+   "text": "Most of the world was spent dying because you stepped on some piece of metal that you didn't"
+  },
+  {
+   "start": 530.87,
+   "end": 532.03,
+   "text": "see and oh, it sucks."
+  },
+  {
+   "start": 532.03,
+   "end": 533.59,
+   "text": "You got tetanus now."
+  },
+  {
+   "start": 533.59,
+   "end": 534.59,
+   "text": "Looks like you're dead."
+  },
+  {
+   "start": 534.59,
+   "end": 537.11,
+   "text": "Dysentery on the Oregon Trail."
+  },
+  {
+   "start": 537.11,
+   "end": 539.23,
+   "text": "Yep, too bad."
+  },
+  {
+   "start": 539.23,
+   "end": 541.83,
+   "text": "Shouldn't have been doing whatever you were doing which was called living because"
+  },
+  {
+   "start": 541.83,
+   "end": 542.83,
+   "text": "now you're dead."
+  },
+  {
+   "start": 542.83,
+   "end": 545.59,
+   "text": "Instead we actually get the opportunity to build all this stuff."
+  },
+  {
+   "start": 545.59,
+   "end": 549.95,
+   "text": "And for me this is the most exciting time period to ever live in because now I get to"
+  },
+  {
+   "start": 549.95,
+   "end": 553.11,
+   "text": "just have any kind of personalized experience."
+  },
+  {
+   "start": 553.11,
+   "end": 555.03,
+   "text": "Like a quick pro tip."
+  },
+  {
+   "start": 555.03,
+   "end": 556.03,
+   "text": "You're learning something."
+  },
+  {
+   "start": 556.03,
+   "end": 561.39,
+   "text": "Dude, if it's open source, clone down the repo, open up AI and say, hey, yo, based"
+  },
+  {
+   "start": 561.39,
+   "end": 564.11,
+   "text": "on the code, give me an example of how to do this."
+  },
+  {
+   "start": 564.11,
+   "end": 565.11,
+   "text": "Explain that."
+  },
+  {
+   "start": 565.11,
+   "end": 566.11,
+   "text": "Explain this."
+  },
+  {
+   "start": 566.11,
+   "end": 567.63,
+   "text": "It's like personalized documentation."
+  },
+  {
+   "start": 567.63,
+   "end": 568.63,
+   "text": "Super cool."
+  },
+  {
+   "start": 568.63,
+   "end": 572.15,
+   "text": "Anyways, I wanted to end on the high note, you know, just because I just feel like"
+  },
+  {
+   "start": 572.15,
+   "end": 576.0699999999999,
+   "text": "the yapping that's going on is just so kind of jaded."
+  },
+  {
+   "start": 576.0699999999999,
+   "end": 578.39,
+   "text": "The name is the tokenogen."
+  }
+ ]
+}

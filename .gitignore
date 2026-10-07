@@ -1,0 +1,12 @@
+# Secrets (API keys) — never commit
+.env
+
+# Virtual environment
+.venv/
+
+# Generated at runtime
+__pycache__/
+*.pyc
+downloades/
+vector_db/
+*_converted.wav
