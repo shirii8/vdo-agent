@@ -15,10 +15,15 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 def download_youtube_audio(url: str) -> str:
     """Download the best audio stream of a YouTube video and convert it to WAV."""
-    output_path = os.path.join(DOWNLOAD_DIR, "%(title)s.%(ext)s")
+    # Name the file by video id: titles can contain characters that are
+    # awkward in file names.
+    output_path = os.path.join(DOWNLOAD_DIR, "%(id)s.%(ext)s")
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": output_path,
+        # A link copied from a playlist (…&list=…) must download only that one
+        # video, not the whole playlist.
+        "noplaylist": True,
         # After download, ffmpeg re-encodes the stream to .wav.
         "postprocessors": [
             {
@@ -38,6 +43,12 @@ def download_youtube_audio(url: str) -> str:
         # prepare_filename gives the pre-conversion name (.webm, .m4a, .opus, ...);
         # swap whatever extension it has for .wav to get the converted file.
         filename = os.path.splitext(ydl.prepare_filename(info))[0] + ".wav"
+
+    if not os.path.exists(filename):
+        raise FileNotFoundError(
+            "The audio download did not produce a file. YouTube may be blocking "
+            "this server, or the link is not a single video."
+        )
     return filename
 
 
