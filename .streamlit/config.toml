@@ -5,3 +5,7 @@ primaryColor = "#43302E"              # Old Burgundy
 backgroundColor = "#FFF9E3"           # light Buttermilk
 secondaryBackgroundColor = "#C1DBE8"  # Pastel Blue
 textColor = "#43302E"
+
+# Hide the developer "Deploy" button and menu in the top-right corner.
+[client]
+toolbarMode = "minimal"

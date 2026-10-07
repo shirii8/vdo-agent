@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 240 252" width="240" height="252" role="img" aria-label="Rewi, the vdo-agent mascot">
+  <title>Rewi</title>
+  <style>
+    /* Colors follow your palette tokens when inlined; fallbacks are used inside <img>. */
+    .b  { fill: var(--accent, #43302E); }
+    .bs { stroke: var(--accent, #43302E); fill: none; }
+    .e  { fill: var(--bg, #FFF9E3); }
+    .es { stroke: var(--bg, #FFF9E3); fill: none; }
+    .a  { fill: var(--accent-2, #C1DBE8); }
+
+    .bob {
+      animation: rewi-bob 1.6s ease-in-out infinite alternate;
+    }
+    .antenna {
+      transform-box: view-box;
+      transform-origin: 80px 42px;
+      animation: rewi-wiggle 2.4s ease-in-out infinite;
+    }
+    .eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: rewi-blink 4s infinite;
+    }
+    .cheek {
+      animation: rewi-blush 3.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes rewi-bob {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-6px); }
+    }
+    @keyframes rewi-wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25%      { transform: rotate(-9deg); }
+      60%      { transform: rotate(7deg); }
+    }
+    @keyframes rewi-blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      94%           { transform: scaleY(0.1); }
+    }
+    @keyframes rewi-blush {
+      from { opacity: 0.7; }
+      to   { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bob, .antenna, .eye, .cheek { animation: none; }
+    }
+  </style>
+
+  <!-- legs (tall so no gap shows while the body bobs) -->
+  <rect class="b" x="80"  y="164" width="18" height="42" rx="6"/>
+  <rect class="b" x="142" y="164" width="18" height="42" rx="6"/>
+  <rect class="b" x="64"  y="196" width="36" height="14" rx="7"/>
+  <rect class="b" x="140" y="196" width="36" height="14" rx="7"/>
+
+  <g class="bob">
+    <!-- play-button antenna -->
+    <g class="antenna">
+      <path class="bs" d="M80 42 L70 20" stroke-width="7" stroke-linecap="round"/>
+      <path class="b bs" d="M60 8 L80 18 L60 28 Z" stroke-width="5" stroke-linejoin="round"/>
+    </g>
+
+    <!-- note-page body with folded corner -->
+    <path class="b" d="M64 40 H166 L200 74 V156 Q200 180 176 180 H64 Q40 180 40 156 V64 Q40 40 64 40 Z"/>
+    <path class="a" d="M166 40 V62 Q166 74 178 74 H200 Z"/>
+
+    <!-- face -->
+    <ellipse class="a cheek" cx="80"  cy="124" rx="10" ry="6"/>
+    <ellipse class="a cheek" cx="160" cy="124" rx="10" ry="6"/>
+    <circle class="e eye" cx="98"  cy="102" r="10"/>
+    <circle class="e eye" cx="142" cy="102" r="10"/>
+    <path class="es" d="M96 130 Q120 152 144 130" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

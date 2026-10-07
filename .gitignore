@@ -8,5 +8,6 @@
 __pycache__/
 *.pyc
 downloades/
+uploads/
 vector_db/
 *_converted.wav

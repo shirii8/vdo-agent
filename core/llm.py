@@ -4,7 +4,7 @@ extractors and the RAG engine.
 
 Uses Google Gemini through the free Google AI Studio API key
 (GOOGLE_API_KEY in .env). Change the models with GEMINI_MODEL and
-GEMINI_FALLBACK_MODEL in .env.
+GEMINI_FALLBACK_MODELS (comma-separated) in .env.
 """
 
 import logging
@@ -17,7 +17,18 @@ logging.getLogger("google_genai.models").setLevel(logging.ERROR)
 
 # "-latest" aliases always point at Google's current Flash / Flash-Lite models.
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
-GEMINI_FALLBACK_MODEL = os.getenv("GEMINI_FALLBACK_MODEL", "gemini-flash-lite-latest")
+
+# Tried in order when the model before it fails. The free tier limits each
+# model separately (the main Flash model allows only ~20 requests a day), so
+# a chain of models keeps the app working after one of them runs out.
+GEMINI_FALLBACK_MODELS = [
+    name.strip()
+    for name in os.getenv(
+        "GEMINI_FALLBACK_MODELS",
+        "gemini-3.5-flash,gemini-flash-lite-latest,gemini-3.5-flash-lite,gemini-3.1-flash-lite",
+    ).split(",")
+    if name.strip()
+]
 
 
 def _gemini(model: str, temperature: float, retries: int):
@@ -30,10 +41,14 @@ def _gemini(model: str, temperature: float, retries: int):
 
 
 def get_llm(temperature: float = 0.3):
-    # The free tier often answers 503 "high demand" on the main model;
-    # if a call fails, LangChain retries the same prompt on the fallback model.
-    # The main model gets no retries so a busy model hands over immediately
-    # instead of waiting through backoff delays.
+    # A failed call (503 "high demand", 429 quota exhausted) is retried with the
+    # same prompt on the next model in the chain. No model retries on its own,
+    # so a busy or exhausted one hands over immediately instead of waiting
+    # through backoff delays; only the last one retries, as the final attempt.
+    last = len(GEMINI_FALLBACK_MODELS) - 1
     return _gemini(GEMINI_MODEL, temperature, retries=0).with_fallbacks(
-        [_gemini(GEMINI_FALLBACK_MODEL, temperature, retries=2)]
+        [
+            _gemini(name, temperature, retries=2 if i == last else 0)
+            for i, name in enumerate(GEMINI_FALLBACK_MODELS)
+        ]
     )

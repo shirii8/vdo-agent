@@ -2,7 +2,8 @@
 RAG (Retrieval-Augmented Generation) chat over the meeting transcript.
 
 Flow of one question:
-  question -> retriever (top-k similar transcript chunks from Chroma)
+  question -> hybrid retriever (keyword + vector search, plus neighbouring
+              chunks; see core/retriever.py)
            -> format_docs (chunks labelled with their [mm:ss] timestamps)
            -> prompt (answer ONLY from context, cite timestamps, else abstain)
            -> Gemini -> {"answer": str, "sources": [Document, ...]}
@@ -15,7 +16,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 from core.llm import get_llm
-from core.vector_store import build_vector_store, load_vector_store, get_retriever
+from core.vector_store import build_vector_store, load_vector_store
+from core.retriever import HybridRetriever, docs_from_store
 
 # Exact sentence the model must use when the transcript doesn't contain the answer.
 NOT_FOUND = "I could not find this information in the video transcript."
@@ -27,7 +29,10 @@ RAG_SYSTEM_PROMPT = (
     "Rules:\n"
     "- Cite the timestamp of every excerpt you used, in square brackets exactly as "
     "written, e.g. [03:12]. Put the citation right after the sentence it supports.\n"
-    f'- If the excerpts do not contain the answer, reply exactly: "{NOT_FOUND}" '
+    "- The excerpts are consecutive pieces of the transcript, so an explanation "
+    "may be spread over several of them: read them together and answer from "
+    "whatever they do say about the topic, even if it is only part of the picture.\n"
+    f'- Only when none of the excerpts is about the question, reply exactly: "{NOT_FOUND}" '
     "and nothing else.\n"
     "- Be concise. If quoting someone, say so.\n\n"
     "Transcript excerpts:\n{context}"
@@ -50,7 +55,11 @@ def format_docs(docs):
 
 
 def _make_chain(retriever):
-    """Question string -> {"answer": str, "sources": [Document]}."""
+    """
+    Question string -> {"answer": str, "sources": [Document]}.
+    `retriever` is anything that maps a question to Documents: a function such
+    as HybridRetriever.search, or a LangChain retriever.
+    """
     prompt = ChatPromptTemplate.from_messages(
         [
             ("system", RAG_SYSTEM_PROMPT),
@@ -76,15 +85,17 @@ def _make_chain(retriever):
 def build_rag_chain(segments: list, k: int = 4):
     """Index a new transcript's timestamped segments and return a chain to query it."""
     vector_store = build_vector_store(segments)
-    retriever = get_retriever(vector_store, k=k)
-    return _make_chain(retriever)
+    # The keyword index needs the chunk texts; read them back from the store so
+    # both searches work on exactly the same chunks.
+    retriever = HybridRetriever(vector_store, docs_from_store(vector_store), k=k)
+    return _make_chain(retriever.search)
 
 
 def load_rag_chain(k: int = 4):
     """Return a chain over the transcript already persisted in vector_db/ (no re-indexing)."""
     vector_store = load_vector_store()
-    retriever = get_retriever(vector_store, k=k)
-    return _make_chain(retriever)
+    retriever = HybridRetriever(vector_store, docs_from_store(vector_store), k=k)
+    return _make_chain(retriever.search)
 
 
 def ask_question(rag_chain, question: str) -> dict:

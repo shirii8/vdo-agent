@@ -1,0 +1,15 @@
+[
+  {"question": "explain Identity protocols", "start": 1138, "end": 1245, "answerable": true},
+  {"question": "What is SAML?", "start": 1138, "end": 1212, "answerable": true},
+  {"question": "What does OpenID Connect add on top of OAuth 2?", "start": 974, "end": 1048, "answerable": true},
+  {"question": "What is the difference between access tokens and refresh tokens?", "start": 774, "end": 880, "answerable": true},
+  {"question": "How does basic authentication work?", "start": 191, "end": 297, "answerable": true},
+  {"question": "How are API keys used to authenticate requests?", "start": 381, "end": 487, "answerable": true},
+  {"question": "Where are sessions stored in session-based authentication?", "start": 482, "end": 611, "answerable": true},
+  {"question": "What is OAuth 2 and what is it for?", "start": 875, "end": 980, "answerable": true},
+  {"question": "How does single sign-on let you access several apps?", "start": 1076, "end": 1177, "answerable": true},
+  {"question": "What is a JSON Web Token and why is it stateless?", "start": 607, "end": 779, "answerable": true},
+  {"question": "How do passkeys and WebAuthn work?", "answerable": false},
+  {"question": "What is the speaker's favourite programming language?", "answerable": false},
+  {"question": "How much does an Okta subscription cost?", "answerable": false}
+]

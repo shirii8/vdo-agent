@@ -27,6 +27,7 @@ langchain-chroma
 chromadb
 langchain-huggingface
 sentence-transformers
+rank-bm25               # keyword (BM25) half of the hybrid retriever
 torch                   # used by sentence-transformers for the embeddings
 
 # --- Config ---

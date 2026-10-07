@@ -107,7 +107,7 @@ def transcribe_chunk_sarvam(chunk_path: str) -> list:
         piece.export(piece_path, format="wav")
 
         try:
-            print(f"  → Sarvam piece {i + 1}/{total_pieces} ...")
+            print(f"  Sarvam piece {i + 1}/{total_pieces} ...")
             text = _send_to_sarvam(piece_path).strip()
             if text:
                 segments.append(
