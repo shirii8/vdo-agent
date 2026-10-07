@@ -39,7 +39,7 @@ Requirements: Python 3.13, ffmpeg on PATH, and Node.js or Deno (yt-dlp needs a J
 
 ```
 python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r Requirements.txt
+.venv\Scripts\python.exe -m pip install -r requirements.txt
 .venv\Scripts\streamlit.exe run app.py
 ```
 
