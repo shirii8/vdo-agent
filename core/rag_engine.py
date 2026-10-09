@@ -16,7 +16,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 from core.llm import get_llm
-from core.vector_store import build_vector_store, load_vector_store
+from core.vector_store import build_vector_store
 from core.retriever import HybridRetriever, docs_from_store
 
 # Exact sentence the model must use when the transcript doesn't contain the answer.
@@ -87,13 +87,6 @@ def build_rag_chain(segments: list, k: int = 4):
     vector_store = build_vector_store(segments)
     # The keyword index needs the chunk texts; read them back from the store so
     # both searches work on exactly the same chunks.
-    retriever = HybridRetriever(vector_store, docs_from_store(vector_store), k=k)
-    return _make_chain(retriever.search)
-
-
-def load_rag_chain(k: int = 4):
-    """Return a chain over the transcript already persisted in vector_db/ (no re-indexing)."""
-    vector_store = load_vector_store()
     retriever = HybridRetriever(vector_store, docs_from_store(vector_store), k=k)
     return _make_chain(retriever.search)
 

@@ -76,7 +76,7 @@ def main():
         questions = load(questions_file)
         docs = segments_to_documents(segments)
 
-        # In-memory collection, so the app's own vector_db/ is left untouched.
+        # A separate in-memory collection per dataset.
         store = Chroma.from_documents(docs, get_embeddings(), collection_name=f"eval_{name}")
         hybrid = HybridRetriever(store, docs, k=args.k)
 

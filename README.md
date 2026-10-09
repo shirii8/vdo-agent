@@ -71,15 +71,16 @@ Create a `.env` file:
 | `core/llm.py` | Gemini model with automatic fallback |
 | `core/analysis.py` | Runs title, summary and extraction in parallel |
 | `core/summarizer.py`, `core/extractor.py` | The individual Gemini prompts |
-| `core/vector_store.py` | Timestamped chunks into ChromaDB |
+| `core/vector_store.py` | Timestamped chunks into an in-memory ChromaDB collection, one per analysis |
 | `core/retriever.py` | Hybrid retrieval: BM25 + vector search fused, plus neighbouring chunks |
 | `core/rag_engine.py` | Chat chain: cited answers, abstention |
 | `utils/transcript_view.py` | Interactive transcript widget (player, click-to-seek, search) |
+| `utils/mascot.py`, `assets/` | Rewi, the mascot: four expressions used in the loader, logo and tab icon |
 | `eval/` | Retrieval evaluation script, questions and cached transcripts for two videos |
 
 ## Known limits
 
-- One video at a time: analysing a new video replaces the previous chat index.
+- The chat index lives in memory: each analysis gets its own, so simultaneous users don't clash, but it is gone when the app restarts.
 - No reranker yet: the fused hybrid ranking is used as is.
 - Gemini's free tier limits each model per day (about 20 requests on the main Flash model). The app falls back through several models, but heavy use in one day can exhaust them.
 - Each chat question is answered on its own; follow-up questions do not see earlier turns.

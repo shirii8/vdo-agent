@@ -19,7 +19,10 @@ def download_youtube_audio(url: str) -> str:
     # awkward in file names.
     output_path = os.path.join(DOWNLOAD_DIR, "%(id)s.%(ext)s")
     ydl_opts = {
-        "format": "bestaudio/best",
+        # Audio-only if possible, else a normal video that has an audio track.
+        # The filter matters: when YouTube restricts a server it may offer only
+        # "storyboard" preview images, and plain "best" would download those.
+        "format": "bestaudio/best[acodec!=none]",
         "outtmpl": output_path,
         # A link copied from a playlist (…&list=…) must download only that one
         # video, not the whole playlist.
@@ -47,20 +50,26 @@ def download_youtube_audio(url: str) -> str:
             fallback = os.path.splitext(ydl.prepare_filename(info))[0] + ".wav"
     except yt_dlp.utils.DownloadError as error:
         # Typical on cloud hosts: YouTube answers "Sign in to confirm you're
-        # not a bot" to data-centre IP addresses.
-        raise RuntimeError(f"YouTube refused the audio download: {error}") from error
+        # not a bot", or offers no audio at all, to data-centre IP addresses.
+        reason = str(error).replace("ERROR: ", "").split("\n")[0][:160]
+        raise RuntimeError(
+            "YouTube would not give this server the video's audio, and no captions "
+            "were available either. This usually means YouTube is limiting the "
+            "server, not that the link is wrong. Run the app on your own computer, "
+            f"or download the recording and upload it instead. (Details: {reason})"
+        ) from error
 
     # yt-dlp records the final (post-conversion) path of what it downloaded.
     downloads = info.get("requested_downloads") or []
     filename = downloads[0].get("filepath") if downloads else fallback
 
-    if not filename or not os.path.exists(filename):
-        raise FileNotFoundError(
-            "The audio download did not produce a file "
-            f"(got a {info.get('_type', 'video')} with {len(downloads)} download(s); "
-            f"expected {filename or fallback}; "
-            f"folder holds {sorted(os.listdir(DOWNLOAD_DIR))[:5]}). "
-            "YouTube may be blocking this server."
+    # Anything other than the converted .wav means no real audio came back.
+    if not filename or not os.path.exists(filename) or not filename.lower().endswith(".wav"):
+        raise RuntimeError(
+            "YouTube did not return any audio for this video "
+            f"(got '{os.path.basename(filename or fallback)}'). It is probably limiting "
+            "this server. Run the app on your own computer, or download the "
+            "recording and upload it instead."
         )
     return filename
 
